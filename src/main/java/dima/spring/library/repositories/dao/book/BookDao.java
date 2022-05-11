@@ -1,4 +1,4 @@
-package dima.spring.library.dao.book;
+package dima.spring.library.repositories.dao.book;
 
 import dima.spring.library.domain.Book;
 

@@ -1,4 +1,4 @@
-package dima.spring.library.dao.genre;
+package dima.spring.library.repositories.dao.genre;
 
 import dima.spring.library.domain.Genre;
 

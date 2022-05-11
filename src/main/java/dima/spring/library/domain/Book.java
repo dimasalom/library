@@ -11,11 +11,12 @@ import javax.persistence.*;
 @Table(name = "books")
 @AllArgsConstructor
 @NoArgsConstructor
+@NamedEntityGraph(name = "genre-entity-graph", attributeNodes = {@NamedAttributeNode("genre")})
 public class Book {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "book_id")
+    @Column(name = "id")
     private long id;
 
     @Column(name = "book_name")
