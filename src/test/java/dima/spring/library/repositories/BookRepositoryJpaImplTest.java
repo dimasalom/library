@@ -60,7 +60,7 @@ class BookRepositoryJpaImplTest {
 
         val books = bookRepositoryJpa.findAll();
 
-        assertThat(books).isNotNull().hasSize(2)
+        assertThat(books).isNotNull().hasSize(3)
                 .allMatch(b -> !b.getName().equals(""))
                 .allMatch(b -> b.getAuthor() != null)
                 .allMatch(b -> b.getAuthor() != null);

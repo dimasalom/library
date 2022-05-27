@@ -14,7 +14,7 @@
     <h2 class="mb-5">Update Book</h2>
     <div class="row">
         <div class="col-md-6">
-            <form action="#" th:action="@{/update/{id}(id=${book.id})}" th:object="${book}" method="post">
+            <form action="#" th:action="@{/updatebook/{id}(id=${book.id})}" th:object="${book}" method="post">
                 <div class="row">
                     <div class="form-group col-md-6">
 
@@ -27,13 +27,21 @@
                     <div class="form-group col-md-6">
 
                         <label for="author" class="col-form-label">Author</label>
-                        <input type="text" th:field="*{author.name}" class="form-control" id="author" placeholder="Name">
-                        <span th:if="${#fields.hasErrors('name')}" th:errors="*{author.name}" class="text-danger"></span>
+                        <input type="text" th:field="*{author.name}" class="form-control" id="author" placeholder="Author">
+                        <span th:if="${#fields.hasErrors('author')}" th:errors="*{author.name}" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-6">
+
+                        <label for="genre" class="col-form-label">Genre</label>
+                        <input type="text" th:field="*{genre.name}" class="form-control" id="genre" placeholder="Genre">
+                        <span th:if="${#fields.hasErrors('genre')}" th:errors="*{genre.name}" class="text-danger"></span>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6 mt-5">
-                        <input type="submit" class="btn btn-primary" value="Update User">
+                        <input type="submit" class="btn btn-primary" value="Update Book">
                     </div>
                 </div>
             </form>

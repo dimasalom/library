@@ -1,6 +1,7 @@
 package dima.spring.library.domain;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -11,6 +12,7 @@ import javax.persistence.*;
 @Table(name = "authors")
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 public class Author {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

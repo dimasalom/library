@@ -1,6 +1,7 @@
 package dima.spring.library.domain;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -12,6 +13,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @NamedEntityGraph(name = "genre-entity-graph", attributeNodes = {@NamedAttributeNode("genre")})
+@Builder
 public class Book {
 
     @Id

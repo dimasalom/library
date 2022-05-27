@@ -6,10 +6,15 @@ import dima.spring.library.domain.Genre;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface MyBookRepository extends CrudRepository<Book, Long> {
 
     List<Book> findAll();
+
+    Optional<Book> findById(long id);
+
+    Book findBookById(long id);
 
     Book findByName(String name);
 

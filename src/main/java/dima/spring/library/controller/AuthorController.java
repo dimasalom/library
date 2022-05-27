@@ -1,2 +1,4 @@
-package dima.spring.library.controller;public class AuthorController {
+package dima.spring.library.controller;
+
+public class AuthorController {
 }

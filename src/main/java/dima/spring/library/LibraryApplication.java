@@ -25,6 +25,7 @@ public class LibraryApplication {
     public static void main(String[] args) throws Exception {
         SpringApplication.run(LibraryApplication.class);
         Console.main(args);
+
     }
 
     @Autowired
@@ -76,6 +77,8 @@ public class LibraryApplication {
 
         System.out.println(bookRepository.findByIdGreaterThan(2L));
 
-        Page<Author> bookPage = authorRepository.findAll(PageRequest.of(1, 0));
+        Page<Author> bookPage = authorRepository.findAll(PageRequest.of(1, 1));
+
+        System.out.println(bookPage.stream().toArray());
     }
 }
